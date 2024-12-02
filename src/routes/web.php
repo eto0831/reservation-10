@@ -7,6 +7,9 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OwnerController;
+
 
 
 /*
@@ -57,4 +60,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/shop/edit/{id}', [ShopController::class, 'edit'])->name('shop.edit');
     Route::patch('/shop/update/{id}', [ShopController::class, 'update'])->name('shop.update');
     Route::delete('/shop/delete/{id}', [ShopController::class, 'destroy'])->name('shop.destroy');
+});
+
+Route::group(['middleware' => ['role:admin']], function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+    Route::post('/admin/create-owners', [AdminController::class, 'createOwner']);
+});
+
+Route::group(['middleware' => ['role:owner']], function () {
+    Route::get('/owner/dashboard', [OwnerController::class, 'dashboard']);
+    Route::post('/owner/create-shops', [OwnerController::class, 'createShops']);
 });

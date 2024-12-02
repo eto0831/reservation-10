@@ -269,3 +269,25 @@
 2024-12-02 23:32:42,467 INFO spawned: 'scheduler' with pid 11
 2024-12-02 23:32:43,468 INFO success: queue entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2024-12-02 23:32:43,468 INFO success: scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-03 00:23:20,100 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-12-03 00:23:20,102 INFO supervisord started with pid 1
+2024-12-03 00:23:21,104 INFO spawned: 'queue' with pid 9
+2024-12-03 00:23:21,106 INFO spawned: 'scheduler' with pid 10
+2024-12-03 00:23:21,150 INFO exited: queue (exit status 255; not expected)
+2024-12-03 00:23:22,152 INFO spawned: 'queue' with pid 14
+2024-12-03 00:23:22,152 INFO success: scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-03 00:23:22,170 INFO exited: queue (exit status 255; not expected)
+2024-12-03 00:23:24,173 INFO spawned: 'queue' with pid 15
+2024-12-03 00:23:24,193 INFO exited: queue (exit status 255; not expected)
+2024-12-03 00:23:27,197 INFO spawned: 'queue' with pid 16
+2024-12-03 00:23:27,208 INFO exited: queue (exit status 255; not expected)
+2024-12-03 00:23:28,210 INFO gave up: queue entered FATAL state, too many start retries too quickly
+2024-12-03 00:25:25,046 WARN received SIGQUIT indicating exit request
+2024-12-03 00:25:25,048 INFO waiting for scheduler to die
+2024-12-03 00:25:26,048 INFO stopped: scheduler (terminated by SIGTERM)
+2024-12-03 00:25:51,893 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-12-03 00:25:51,895 INFO supervisord started with pid 1
+2024-12-03 00:25:52,897 INFO spawned: 'queue' with pid 9
+2024-12-03 00:25:52,899 INFO spawned: 'scheduler' with pid 10
+2024-12-03 00:25:53,900 INFO success: queue entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-03 00:25:53,901 INFO success: scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
